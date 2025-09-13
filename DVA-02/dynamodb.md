@@ -13,3 +13,14 @@
   - Local secondary index: an index that has the same partition key as the table, but a different sort key.
 
 Quota: 20 global secondary indexes and 5 local secondary indexes per table.
+
+# Consistency models
+
+- DynamoDB supports eventually consistent and strongly consistent reads:
+  - Eventually consistent reads (DEFAULT):
+    - response not reflect of the recently completely write operations
+    - stale data might be returned
+  - Strongly consistent reads:
+    - always reflect all writes that received a successful response prior to the read
+    - higher latency and more expensive
+    - apply ConsistentRead parameter and set it to true for GetItem, Query, Scan operations.
