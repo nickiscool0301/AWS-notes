@@ -10,6 +10,6 @@
 
 - By default, IAM users DO NOT have access to AWS Billing and Cost management
 - Need:
-    + account admin to grant access to IAM user. 
-    + activate IAM user access to the billing and cost management console and attach IAM policy to users
-    + then need to activate IAM user access for IAM policies to take effect
+  - account admin to grant access to IAM user.
+  - activate IAM user access to the billing and cost management console and attach IAM policy to users
+  - then need to activate IAM user access for IAM policies to take effect
