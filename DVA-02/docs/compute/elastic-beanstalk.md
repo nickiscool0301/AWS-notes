@@ -1,55 +1,60 @@
-# Elastic Beanstalk Deployment Policies Comparison
+# Elastic Beanstalk
 
-| Feature                     | All at Once                            | Rolling                                | Rolling with Additional Batch          | Immutable                                 | Blue/Green                           |
-| --------------------------- | -------------------------------------- | -------------------------------------- | -------------------------------------- | ----------------------------------------- | ------------------------------------ |
-| Deploy Time                 | Fastest ⚡️                            | Moderate 🕒                            | Slow 🕒                                | Slower 🕒                                 | Slowest ⏰                           |
-| Zero Downtime?              | ❌ Has downtime                        | ✅ Minimal impact                      | ✅ No downtime                         | ✅ No downtime                            | ✅ No downtime                       |
-| Impact of Failed Deployment | High Risk ⚠️<br>All instances affected | Medium Risk 🔶<br>Only subset affected | Low Risk ✅<br>Only subset affected    | Very Low Risk ✅<br>No impact on existing | Very Low Risk ✅<br>Easy rollback    |
-| Rollback Process            | Manual redeploy<br>Slow & complex      | Manual redeploy<br>Rolling back        | Manual redeploy<br>Rolling back        | Quick ⚡️<br>Terminate new instances      | Instant ⚡️<br>Switch to old version |
-| Code Deployed to            | Existing instances                     | Existing instances<br>in batches       | Existing + new instances<br>in batches | New instances only                        | New environment                      |
-| DNS Change                  | No                                     | No                                     | No                                     | No                                        | Yes                                  |
+## Overview
+**PaaS (Platform as a Service)** - Deploy applications without managing infrastructure  
+**Supported Languages**: Java, .NET, PHP, Node.js, Python, Ruby, Go, Docker  
+**Handles**: Load balancing, auto-scaling, monitoring, patching
 
-## Key Characteristics
+## Deployment Policies
 
-### All at Once
+| Policy | Downtime | Risk | Speed | Best For |
+|--------|----------|------|-------|----------|
+| **All at Once** | Yes | High | Fastest | Dev/Test |
+| **Rolling** | No | Medium | Moderate | Production |
+| **Rolling + Batch** | No | Low | Slow | Production (maintain capacity) |
+| **Immutable** | No | Very Low | Slower | Critical production |
+| **Blue/Green** | No | Very Low | Slowest | Mission-critical |
 
-- Deploys to all instances simultaneously
-- Fastest but highest risk
-- Best for dev/test environments
-- Has downtime during deployment
+**All at Once**
+: Deploy to all instances simultaneously  
+: Has downtime, fastest deployment
 
-### Rolling
+**Rolling**  
+: Deploy in batches, reduced capacity during deployment  
+: No downtime, some instances serve old version
 
-- Updates instances in batches
-- Reduced capacity during deployment
-- Some instances serve old version while others new
-- Good for production with acceptable partial degradation
+**Rolling with Additional Batch**  
+: Launch new instances first, then deploy in batches  
+: Maintains full capacity, longer deployment time
 
-### Rolling with Additional Batch
+**Immutable**  
+: Launch new instances with new version  
+: Zero downtime, quick rollback, higher cost
 
-- Like rolling but launches new instances first
-- Maintains full capacity
-- Takes longer but safer
-- Good for production requiring full capacity
+**Blue/Green**  
+: Create new environment, swap URLs  
+: Zero downtime, instant rollback, requires Route 53
 
-### Immutable
+## Components
+- **Application**: Collection of components (environments, versions)
+- **Application Version**: Deployable code
+- **Environment**: Running application version
+- **Configuration Template**: Environment settings template
 
-- Launches new instances with new version
-- Zero downtime and quick rollback
-- More expensive (double capacity temporarily)
-- Safest for production
+## Key Features
+- **Auto Scaling**: Automatically adjust capacity
+- **Load Balancer**: Distribute traffic
+- **Health Monitoring**: Application and instance health
+- **Version Management**: Track application versions
+- **Log Collection**: Centralized logging
 
-### Blue/Green
+## Configuration
+- **.ebextensions**: YAML/JSON files in source code
+- **Environment Variables**: Runtime configuration
+- **Configuration Files**: Infrastructure settings
+- **Saved Configurations**: Reusable environment templates
 
-- Creates entirely new environment
-- Zero downtime and instant rollback
-- Most expensive (double capacity until swap)
-- Best for critical production applications
-- Requires DNS change (Route 53)
-
-## Best Practices
-
-- Dev/Test: Use All at Once for speed
-- Production (cost-sensitive): Use Rolling with Additional Batch
-- Production (critical): Use Immutable or Blue/Green
-- Always test deployment policy in dev/test environment first
+## Supported Platforms
+- **Web Servers**: Apache, Nginx, IIS
+- **Application Servers**: Tomcat, Passenger, Puma
+- **Docker**: Single/multi-container

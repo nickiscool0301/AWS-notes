@@ -1,60 +1,62 @@
-site_name: AWS Developer Associate Notes
+site_name: AWS DVA-C02 Study Notes
 theme:
   name: material
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.top
     - search.highlight
+    - toc.integrate
   palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+    scheme: default
+    primary: indigo
+    accent: blue
+  font:
+    text: Inter
+    code: JetBrains Mono
 
 markdown_extensions:
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
   - pymdownx.superfences
   - admonition
   - tables
   - attr_list
   - md_in_html
+  - pymdownx.keys
+  - pymdownx.mark
+  - def_list
 
 nav:
   - Home: index.md
   - Compute:
-    - EC2: compute/ec2.md
-    - Lambda: compute/lambda.md
-    - Elastic Beanstalk: compute/elastic-beanstalk.md
+      - EC2: compute/ec2.md
+      - Lambda: compute/lambda.md
+      - Elastic Beanstalk: compute/elastic-beanstalk.md
   - Storage:
-    - S3: storage/s3.md
+      - S3: storage/s3.md
   - Security:
-    - IAM: security/iam.md
-    - Cognito: security/cognito.md
+      - IAM: security/iam.md
+      - Cognito: security/cognito.md
   - Networking:
-    - API Gateway: networking/api-gateway.md
-    - CloudFront: networking/cloudfront.md
-    - Route 53: networking/route53.md
+      - API Gateway: networking/api-gateway.md
+      - CloudFront: networking/cloudfront.md
+      - Route 53: networking/route53.md
   - Security & Networking:
-    - Security Groups & NACLs: security-networking/security-groups-nacls.md
-    - HTTPS: security-networking/https.md
+      - Security Groups & NACLs: security-networking/security-groups-nacls.md
+      - HTTPS: security-networking/https.md
   - Database:
-    - DynamoDB: database/dynamodb.md
+      - DynamoDB: database/dynamodb.md
   - Messaging:
-    - SQS: messaging/sqs.md
-    - Kinesis: messaging/kinesis.md
+      - SQS: messaging/sqs.md
+      - Kinesis: messaging/kinesis.md
   - Integration:
-    - Step Functions: integration/step-functions.md
+      - Step Functions: integration/step-functions.md
   - Scaling:
-    - Auto Scaling Groups: scaling/auto-scaling-groups.md
+      - Auto Scaling Groups: scaling/auto-scaling-groups.md
   - Load Balancing:
-    - Load Balancers: load-balancing/load-balancers.md
+      - Load Balancers: load-balancing/load-balancers.md
   - Deployment:
-    - SAM (Serverless Application Model): deployment/sam.md
+      - SAM (Serverless Application Model): deployment/sam.md
   - General:
-    - General Notes: general/general.md
-    - Must Review: general/must-review.md
+      - General Notes: general/general.md
+      - Must Review: general/must-review.md

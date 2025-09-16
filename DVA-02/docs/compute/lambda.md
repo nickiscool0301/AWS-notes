@@ -1,91 +1,59 @@
-# Lambda Configuration and Scaling
+# Lambda
 
-## CPU Settings
+## Core Concepts
+**Serverless compute** - Run code without managing servers  
+**Event-driven** - Triggered by events from AWS services  
+**Pay-per-request** - Only pay for compute time used  
+**Auto-scaling** - Handles scaling automatically
 
-- Lambda does not allow you to set CPU directly
-- CPU is allocated based on the amount of memory configured
+## Key Limits
+- **Memory**: 128MB - 10,240MB (1MB increments)
+- **CPU**: Allocated proportionally to memory (can't set directly)
+- **Timeout**: 15 minutes max
+- **Payload**: 6MB synchronous, 256KB asynchronous
+- **Deployment package**: 50MB zipped, 250MB unzipped
+- **Concurrent executions**: 1,000 per region (soft limit)
 
-## Types of Concurrency
+## Concurrency Types
 
-| Feature     | Reserved Concurrency           | Provisioned Concurrency                    |
-| ----------- | ------------------------------ | ------------------------------------------ |
-| Purpose     | Limits maximum concurrency     | Pre-initializes function instances         |
-| Use Case    | Limiting resource usage        | Reducing latency for predictable workloads |
-| Scaling     | Acts as a ceiling              | Can be auto-scaled                         |
-| Application | Entire function (all versions) | Specific versions or aliases               |
-| Cost        | No additional cost             | Pay for provisioned instances              |
+| Type | Purpose | Cost | Auto Scaling |
+|------|---------|------|-------------|
+| **Reserved** | Limit max concurrency | Free | No |
+| **Provisioned** | Pre-warm instances | Pay for capacity | Yes |
 
-## Key Points to Remember
+**Reserved Concurrency**
+: Sets ceiling for concurrent executions  
+: Prevents function from consuming all account capacity  
+: Applied to entire function
 
-- **Reserved Concurrency**:
+**Provisioned Concurrency**  
+: Pre-initializes instances to eliminate cold starts  
+: Applied to specific version/alias  
+: Can auto-scale based on schedule/utilization
 
-  - Acts as a hard limit on function concurrency
-  - Guarantees maximum number of concurrent executions
-  - Cannot be managed by Application Auto Scaling
-  - Useful for limiting costs or backend resources
+## Triggers
+- **API Gateway**: HTTP requests
+- **S3**: Object events
+- **DynamoDB**: Stream events
+- **SQS/SNS**: Message events
+- **CloudWatch Events**: Scheduled events
+- **Application Load Balancer**: HTTP requests
 
-- **Provisioned Concurrency**:
-  - Pre-initializes function instances
-  - Eliminates cold starts
-  - Can be managed by Application Auto Scaling
-  - Perfect for predictable workload patterns
-  - Can be scheduled (e.g., for sales events)
+## Deployment
+- **Deployment package**: ZIP file with code
+- **Container images**: Up to 10GB
+- **Layers**: Share code/libraries across functions
+- **Versions**: Immutable snapshots
+- **Aliases**: Mutable pointers to versions
 
-## Scaling Patterns
-
-1. **Default Scaling**:
-
-   - Functions scale automatically
-   - May experience cold starts
-   - No additional cost
-
-2. **Reserved Concurrency Pattern**:
-
-   ```
-   Function ─► Reserved Concurrency (100)
-                └─► Cannot exceed 100 concurrent executions
-   ```
-
-3. **Provisioned Concurrency Pattern**:
-   ```
-   Function ─► Provisioned Concurrency (50)
-                └─► Auto Scaling (based on schedule/utilization)
-                    └─► Can scale up/down within limits
-   ```
-
-## Real-World Example (Black Friday Sale)
-
-```
-Before Sale Hours:
-└─► Provisioned Concurrency: 10 instances
-
-During Sale (Auto Scaled):
-└─► Provisioned Concurrency: Scales to 100 instances
-    └─► All requests handled by warm instances
-    └─► No cold starts = Consistent low latency
-```
+## Environment Variables
+- Key-value pairs available to function
+- Can be encrypted with KMS
+- Useful for configuration without code changes
 
 ## Best Practices
-
-1. Use Provisioned Concurrency when:
-
-   - You have predictable traffic patterns
-   - Cold starts are unacceptable
-   - You can schedule scaling events
-
-2. Use Reserved Concurrency when:
-
-   - You need to limit resource usage
-   - You need to guarantee capacity for specific functions
-   - You want to prevent one function from consuming all capacity
-
-3. Monitor and Adjust:
-   - Watch ConcurrentExecutions metric
-   - Monitor ProvisionedConcurrencySpillover
-   - Use Application Auto Scaling for dynamic workloads
-
-## Common Issues
-
-- Cold Starts: Solved by Provisioned Concurrency
-- Throttling: Managed by Reserved Concurrency
-- Cost Management: Balance between provisioned instances and on-demand scaling
+- Keep functions small and focused
+- Use environment variables for config
+- Implement proper error handling
+- Monitor with CloudWatch metrics
+- Use provisioned concurrency for latency-critical workloads

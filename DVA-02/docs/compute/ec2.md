@@ -1,16 +1,36 @@
-# Types
+# EC2 (Elastic Compute Cloud)
 
-1. Dedicated Hosts
+## Instance Types
+**General Purpose**: T3, T4g, M5, M6i  
+**Compute Optimized**: C5, C6i  
+**Memory Optimized**: R5, X1e  
+**Storage Optimized**: I3, D3  
+**Accelerated Computing**: P4, G4
 
-   - Physical servers with EC2 instance capacity fully dedicated to your use.
-   - Own license and compliance benefits.
-   - more expensive than Dedicated Instances
+## Tenancy Options
+**Shared (Default)**
+: Multiple customers share physical hardware
 
-2. Dedicated Instances
-   - Run in a VPC on hardware that's dedicated to a single customer.
-   - May share hardware with other instances from the same AWS account.
+**Dedicated Instance** 
+: Hardware dedicated to your account, may share with other instances in same account
 
-# AWS account free
+**Dedicated Host**
+: Physical server completely dedicated to you, bring your own license (BYOL)
 
-- Account less than 12 months old can use t2.micro or t3.micro free for 750 hours per month
-- After 12 months, you will be charged the standard, pay-as-you-go service rates
+## Pricing Models
+- **On-Demand**: Pay per hour/second, no commitment
+- **Reserved**: 1-3 year commitment, up to 75% savings
+- **Spot**: Unused capacity, up to 90% savings, can be interrupted
+- **Savings Plans**: Flexible pricing for consistent usage
+
+## Key Features
+- **Auto Scaling**: Automatically adjust capacity
+- **Load Balancing**: Distribute traffic across instances  
+- **Security Groups**: Virtual firewalls
+- **Key Pairs**: SSH access (Linux) / RDP access (Windows)
+- **User Data**: Bootstrap scripts at launch
+
+## Free Tier
+- **t2.micro** or **t3.micro** (1 vCPU, 1GB RAM)
+- **750 hours/month** for first 12 months
+- Linux/Windows eligible
