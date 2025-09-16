@@ -20,7 +20,7 @@
     
     
       
-        <title>API Gateway - AWS Developer Associate Notes</title>
+        <title>API Gateway - AWS DVA-C02 Study Notes</title>
       
     
     
@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -58,12 +58,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -84,9 +82,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-header__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-header__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AWS Developer Associate Notes
+            AWS DVA-C02 Study Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -114,33 +114,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -194,276 +168,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../compute/ec2/" class="md-tabs__link">
-          
-  
-  
-  Compute
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../storage/s3/" class="md-tabs__link">
-          
-  
-  
-  Storage
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security/iam/" class="md-tabs__link">
-          
-  
-  
-  Security
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-  
-  Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security-networking/security-groups-nacls/" class="md-tabs__link">
-          
-  
-  
-  Security & Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../database/dynamodb/" class="md-tabs__link">
-          
-  
-  
-  Database
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../messaging/sqs/" class="md-tabs__link">
-          
-  
-  
-  Messaging
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../integration/step-functions/" class="md-tabs__link">
-          
-  
-  
-  Integration
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../scaling/auto-scaling-groups/" class="md-tabs__link">
-          
-  
-  
-  Scaling
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../load-balancing/load-balancers/" class="md-tabs__link">
-          
-  
-  
-  Load Balancing
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../deployment/sam/" class="md-tabs__link">
-          
-  
-  
-  Deployment
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../general/general/" class="md-tabs__link">
-          
-  
-  
-  General
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -477,18 +181,18 @@
                     
 
 
+
   
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-nav__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-nav__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AWS Developer Associate Notes
+    AWS DVA-C02 Study Notes
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -526,19 +230,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -645,19 +349,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -718,19 +422,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -819,9 +523,6 @@
         
         
       
-      
-        
-      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
@@ -908,60 +609,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#key-concepts-features" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Concepts &amp; Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Concepts &amp; Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#api-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Optimization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-endpoint-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Endpoint Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integrations
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#important-notes" class="md-nav__link">
+  <a href="#api-types" class="md-nav__link">
     <span class="md-ellipsis">
-      Important Notes
+      API Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoint Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security &amp; Authorization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requestresponse-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Request/Response Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance &amp; Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integration-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring &amp; Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limits-quotas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limits &amp; Quotas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
     </span>
   </a>
   
@@ -1040,19 +771,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1136,19 +867,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1209,19 +940,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1305,19 +1036,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -1378,19 +1109,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1451,19 +1182,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   
@@ -1524,19 +1255,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   
@@ -1597,19 +1328,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
             
   
   
@@ -1689,92 +1420,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#key-concepts-features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Key Concepts &amp; Features
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key Concepts &amp; Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#api-optimization" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Optimization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#api-endpoint-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      API Endpoint Types
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#security" class="md-nav__link">
-    <span class="md-ellipsis">
-      Security
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#integrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integrations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#important-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1785,37 +1430,148 @@
 
 
 <h1 id="api-gateway">API Gateway</h1>
-<p>A fully managed service for creating, publishing, maintaining, monitoring, and securing APIs at any scale.</p>
-<h2 id="key-concepts-features">Key Concepts &amp; Features</h2>
-<h3 id="api-optimization">API Optimization</h3>
+<h2 id="overview">Overview</h2>
+<p><strong>Fully managed API service</strong> - Create, publish, maintain, monitor, and secure APIs<br />
+<strong>Any scale</strong> - Handle thousands of concurrent API calls<br />
+<strong>Multiple protocols</strong> - REST APIs, HTTP APIs, WebSocket APIs<br />
+<strong>Pay-per-use</strong> - No upfront costs or minimum fees</p>
+<h2 id="api-types">API Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Best For</th>
+<th>Features</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>REST API</strong></td>
+<td>Full feature set, legacy systems</td>
+<td>Caching, request validation, SDK generation</td>
+<td>Higher</td>
+</tr>
+<tr>
+<td><strong>HTTP API</strong></td>
+<td>Modern applications, lower latency</td>
+<td>JWT authorization, CORS</td>
+<td>Lower (up to 70% cost reduction)</td>
+</tr>
+<tr>
+<td><strong>WebSocket API</strong></td>
+<td>Real-time communication</td>
+<td>Bidirectional communication</td>
+<td>Pay per message</td>
+</tr>
+</tbody>
+</table>
+<h2 id="endpoint-types">Endpoint Types</h2>
+<dl>
+<dt><strong>Edge-Optimized</strong> (Default)</dt>
+<dd>Requests routed to nearest CloudFront edge location  </dd>
+<dd>Best for geographically distributed clients  </dd>
+<dd>Uses CloudFront network for optimization</dd>
+<dt><strong>Regional</strong></dt>
+<dd>For clients in same region as API  </dd>
+<dd>Lower latency for regional clients  </dd>
+<dd>Can combine with your own CloudFront distribution</dd>
+<dt><strong>Private</strong></dt>
+<dd>Accessible only from your VPC  </dd>
+<dd>Uses VPC endpoints for secure access  </dd>
+<dd>Not exposed to public internet</dd>
+</dl>
+<h2 id="security-authorization">Security &amp; Authorization</h2>
+<p><strong>Authentication Methods</strong>
+- <strong>AWS IAM</strong>: Use IAM roles and policies
+- <strong>Cognito User Pools</strong>: Integrate with Cognito for user authentication<br />
+- <strong>Lambda Authorizers</strong>: Custom authorization logic with Lambda
+- <strong>API Keys</strong>: Simple client identification and usage tracking</p>
+<p><strong>Additional Security</strong>
+- <strong>Resource policies</strong>: Control access to API resources
+- <strong>CORS</strong>: Cross-origin resource sharing configuration
+- <strong>Certificate management</strong>: SSL/TLS certificates for custom domains</p>
+<h2 id="requestresponse-features">Request/Response Features</h2>
+<dl>
+<dt><strong>Request Validation</strong></dt>
+<dd>Validate request parameters and body  </dd>
+<dd>Reduce backend processing load  </dd>
+<dd>Return validation errors immediately</dd>
+<dt><strong>Request Transformation</strong></dt>
+<dd>Modify requests before sending to backend  </dd>
+<dd>Map parameters and headers  </dd>
+<dd>Change request format</dd>
+<dt><strong>Response Transformation</strong></dt>
+<dd>Modify responses before returning to client  </dd>
+<dd>Transform data format  </dd>
+<dd>Add/remove headers</dd>
+</dl>
+<h2 id="performance-optimization">Performance &amp; Optimization</h2>
+<dl>
+<dt><strong>Caching</strong></dt>
+<dd>Response caching with configurable TTL (Time-To-Live)  </dd>
+<dd>Reduces calls to backend services  </dd>
+<dd>Improves response times and reduces costs</dd>
+<dt><strong>Throttling</strong></dt>
+<dd>Rate limiting to protect backend services  </dd>
+<dd>Configurable per-client limits  </dd>
+<dd>Burst capacity for traffic spikes</dd>
+<dt><strong>Usage Plans &amp; API Keys</strong></dt>
+<dd>Define throttling and quota limits  </dd>
+<dd>Associate with API keys for tracking  </dd>
+<dd>Different tiers of service</dd>
+</dl>
+<h2 id="integration-types">Integration Types</h2>
+<dl>
+<dt><strong>Lambda Integration</strong></dt>
+<dd>Direct integration with Lambda functions  </dd>
+<dd>Synchronous and asynchronous invocation  </dd>
+<dd>Most common integration pattern</dd>
+<dt><strong>HTTP Integration</strong></dt>
+<dd>Forward requests to HTTP endpoints  </dd>
+<dd>Support for HTTP/HTTPS backends  </dd>
+<dd>Can integrate with ALB, NLB</dd>
+<dt><strong>AWS Service Integration</strong></dt>
+<dd>Direct integration with AWS services  </dd>
+<dd>DynamoDB, S3, SNS, SQS without Lambda  </dd>
+<dd>Reduces latency and complexity</dd>
+<dt><strong>VPC Link</strong></dt>
+<dd>Connect to private resources in VPC  </dd>
+<dd>Application Load Balancers and Network Load Balancers  </dd>
+<dd>Secure communication without internet gateway</dd>
+</dl>
+<h2 id="monitoring-logging">Monitoring &amp; Logging</h2>
+<dl>
+<dt><strong>CloudWatch Integration</strong></dt>
+<dd>API metrics (latency, errors, request count)  </dd>
+<dd>Custom metrics and alarms  </dd>
+<dd>Automatic monitoring setup</dd>
+<dt><strong>Access Logging</strong></dt>
+<dd>Detailed request/response logs  </dd>
+<dd>Customizable log format  </dd>
+<dd>Integration with CloudWatch Logs</dd>
+<dt><strong>AWS X-Ray</strong></dt>
+<dd>Distributed tracing  </dd>
+<dd>Performance analysis  </dd>
+<dd>Error detection and debugging</dd>
+</dl>
+<h2 id="limits-quotas">Limits &amp; Quotas</h2>
 <ul>
-<li><strong>Response Caching:</strong> Caches endpoint responses for a specified TTL (Time-To-Live) to reduce the number of calls made to your backend and improve latency.</li>
-<li><strong>Payload Compression:</strong> Compresses response payloads to reduce latency and data transfer costs.</li>
+<li><strong>Payload size</strong>: 10MB for REST APIs, 6MB for HTTP APIs</li>
+<li><strong>Timeout</strong>: 29 seconds maximum</li>
+<li><strong>Rate limits</strong>: 10,000 requests per second (default)</li>
+<li><strong>Burst limits</strong>: 5,000 requests (default)</li>
+<li><strong>API keys</strong>: 500 per account per region</li>
 </ul>
-<h3 id="api-endpoint-types">API Endpoint Types</h3>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
-<li><strong>Edge-Optimized:</strong> Default. Best for geographically distributed clients. Requests are routed to the nearest CloudFront Point of Presence (POP).</li>
-<li><strong>Regional:</strong> For clients in the same region as the API.</li>
-<li><strong>Private:</strong> Can only be accessed from your Amazon VPC using a VPC endpoint.</li>
-</ul>
-<h3 id="security">Security</h3>
-<ul>
-<li><strong>Authentication &amp; Authorization:</strong></li>
-<li><strong>IAM:</strong> Use AWS IAM roles and policies to authorize access to your APIs.</li>
-<li><strong>Cognito User Pools:</strong> Authenticate users through Cognito.</li>
-<li><strong>Lambda Authorizers (Custom Authorizers):</strong> Use a Lambda function to perform custom authorization logic.</li>
-<li><strong>API Keys:</strong> For tracking and controlling access for specific clients.</li>
-<li><strong>Throttling &amp; Usage Plans:</strong> Protect your backend from traffic spikes by setting rate limits and quotas.</li>
-</ul>
-<h2 id="integrations">Integrations</h2>
-<ul>
-<li><strong>VPC Links:</strong> Connect your API Gateway to private resources within a VPC, like Application Load Balancers or EC2 instances, without exposing them to the public internet.</li>
-<li><strong>AWS Service Integrations:</strong> Directly integrate with other AWS services (e.g., Lambda, DynamoDB, S3). For example, you can have an API endpoint that directly reads from a DynamoDB table.</li>
-</ul>
-<h2 id="important-notes">Important Notes</h2>
-<ul>
-<li><strong>ElastiCache:</strong> This is a downstream service. While it can cache data for your backend (e.g., a Lambda function), it does not cache the API Gateway responses themselves. Use API Gateway's built-in caching for that.</li>
-<li><strong>API Gateway VPC Endpoint:</strong> This allows resources <em>within</em> your VPC to securely access your Private APIs without using an internet gateway.</li>
+<li>Use HTTP APIs for new applications when possible</li>
+<li>Implement proper error handling and status codes</li>
+<li>Enable caching for frequently accessed data</li>
+<li>Use throttling to protect backend services</li>
+<li>Monitor API performance with CloudWatch</li>
+<li>Implement request validation to reduce backend load</li>
+<li>Use least privilege principle for IAM policies</li>
 </ul>
 
 
@@ -1871,7 +1627,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

@@ -20,7 +20,7 @@
     
     
       
-        <title>Route 53 - AWS Developer Associate Notes</title>
+        <title>Route 53 - AWS DVA-C02 Study Notes</title>
       
     
     
@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -58,12 +58,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comparison-of-alias-and-cname-records" class="md-skip">
+        <a href="#route-53" class="md-skip">
           Skip to content
         </a>
       
@@ -84,9 +82,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-header__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-header__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AWS Developer Associate Notes
+            AWS DVA-C02 Study Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -114,33 +114,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -194,276 +168,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../compute/ec2/" class="md-tabs__link">
-          
-  
-  
-  Compute
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../storage/s3/" class="md-tabs__link">
-          
-  
-  
-  Storage
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security/iam/" class="md-tabs__link">
-          
-  
-  
-  Security
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../api-gateway/" class="md-tabs__link">
-          
-  
-  
-  Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security-networking/security-groups-nacls/" class="md-tabs__link">
-          
-  
-  
-  Security & Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../database/dynamodb/" class="md-tabs__link">
-          
-  
-  
-  Database
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../messaging/sqs/" class="md-tabs__link">
-          
-  
-  
-  Messaging
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../integration/step-functions/" class="md-tabs__link">
-          
-  
-  
-  Integration
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../scaling/auto-scaling-groups/" class="md-tabs__link">
-          
-  
-  
-  Scaling
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../load-balancing/load-balancers/" class="md-tabs__link">
-          
-  
-  
-  Load Balancing
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../deployment/sam/" class="md-tabs__link">
-          
-  
-  
-  Deployment
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../general/general/" class="md-tabs__link">
-          
-  
-  
-  General
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -477,18 +181,18 @@
                     
 
 
+
   
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-nav__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-nav__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AWS Developer Associate Notes
+    AWS DVA-C02 Study Notes
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -526,19 +230,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -645,19 +349,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -718,19 +422,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -817,9 +521,6 @@
     
       
         
-        
-      
-      
         
       
     
@@ -913,6 +614,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Route 53
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -924,6 +638,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#record-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Record Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alias-records-vs-cname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alias Records vs CNAME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routing-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Routing Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#health-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Health Checks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#private-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Private DNS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traffic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traffic Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolver" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolver
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -948,19 +771,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1044,19 +867,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1117,19 +940,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1213,19 +1036,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
             
   
   
@@ -1286,19 +1109,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1359,19 +1182,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   
@@ -1432,19 +1255,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   
@@ -1505,19 +1328,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
             
   
   
@@ -1597,24 +1420,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1624,21 +1429,192 @@
 
 
 
-<h1 id="comparison-of-alias-and-cname-records">Comparison of alias and CNAME records</h1>
+<h1 id="route-53">Route 53</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Scalable DNS service</strong> - Domain name system with high availability<br />
+<strong>Domain registration</strong> - Buy and manage domain names<br />
+<strong>Health checking</strong> - Monitor application health and route traffic<br />
+<strong>Global infrastructure</strong> - Distributed DNS service worldwide</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<dl>
+<dt><strong>Hosted Zone</strong></dt>
+<dd>Container for DNS records for a domain  </dd>
+<dd>Public hosted zones for internet traffic  </dd>
+<dd>Private hosted zones for VPC internal traffic</dd>
+<dt><strong>DNS Records</strong></dt>
+<dd>Instructions for DNS queries  </dd>
+<dd>Different record types for different purposes  </dd>
+<dd>TTL (Time-To-Live) controls caching duration</dd>
+<dt><strong>Name Servers</strong></dt>
+<dd>Servers that respond to DNS queries  </dd>
+<dd>Route 53 provides 4 name servers per hosted zone  </dd>
+<dd>Must be configured at domain registrar</dd>
+</dl>
+<h2 id="record-types">Record Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Purpose</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td>Map domain to IPv4 address</td>
+<td>example.com → 192.0.2.1</td>
+</tr>
+<tr>
+<td><strong>AAAA</strong></td>
+<td>Map domain to IPv6 address</td>
+<td>example.com → 2001:db8::1</td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td>Alias one domain to another</td>
+<td>www.example.com → example.com</td>
+</tr>
+<tr>
+<td><strong>MX</strong></td>
+<td>Mail exchange servers</td>
+<td>example.com → mail.example.com</td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td>Text information</td>
+<td>Domain verification, SPF records</td>
+</tr>
+<tr>
+<td><strong>SRV</strong></td>
+<td>Service discovery</td>
+<td>_service._protocol.domain</td>
+</tr>
+<tr>
+<td><strong>NS</strong></td>
+<td>Name server records</td>
+<td>Delegate subdomain to other servers</td>
+</tr>
+<tr>
+<td><strong>PTR</strong></td>
+<td>Reverse DNS lookup</td>
+<td>IP address to domain name</td>
+</tr>
+</tbody>
+</table>
+<h2 id="alias-records-vs-cname">Alias Records vs CNAME</h2>
+<dl>
+<dt><strong>Alias Records</strong></dt>
+<dd>Route 53 specific extension  </dd>
+<dd>Can be used for root domain (example.com)  </dd>
+<dd>Free of charge  </dd>
+<dd>Only redirect to AWS resources</dd>
+<dt><strong>CNAME Records</strong></dt>
+<dd>Standard DNS record  </dd>
+<dd>Cannot be used for root domain  </dd>
+<dd>Charged per query  </dd>
+<dd>Can redirect to any domain</dd>
+</dl>
+<p><strong>Supported Alias Targets</strong>
+- Application Load Balancer
+- Network Load Balancer<br />
+- CloudFront distributions
+- S3 website endpoints
+- API Gateway
+- VPC endpoints
+- Global Accelerator
+- Other Route 53 records in same hosted zone</p>
+<h2 id="routing-policies">Routing Policies</h2>
+<dl>
+<dt><strong>Simple Routing</strong></dt>
+<dd>Single resource for domain  </dd>
+<dd>No health checks  </dd>
+<dd>Multiple IP addresses return random selection</dd>
+<dt><strong>Weighted Routing</strong></dt>
+<dd>Distribute traffic based on assigned weights  </dd>
+<dd>Useful for A/B testing and gradual deployments  </dd>
+<dd>Weight 0 stops traffic to resource</dd>
+<dt><strong>Latency-Based Routing</strong></dt>
+<dd>Route to region with lowest latency  </dd>
+<dd>Requires latency measurements between users and regions  </dd>
+<dd>Automatically chooses best performing region</dd>
+<dt><strong>Failover Routing</strong></dt>
+<dd>Active/passive failover setup  </dd>
+<dd>Primary resource serves traffic when healthy  </dd>
+<dd>Secondary resource used when primary fails</dd>
+<dt><strong>Geolocation Routing</strong></dt>
+<dd>Route based on user's geographic location  </dd>
+<dd>Country or continent-level routing  </dd>
+<dd>Default location for unmatched queries</dd>
+<dt><strong>Geoproximity Routing</strong></dt>
+<dd>Route based on geographic location with bias  </dd>
+<dd>Bias values shift traffic toward/away from resources  </dd>
+<dd>Requires Route 53 Traffic Flow</dd>
+<dt><strong>Multivalue Answer Routing</strong></dt>
+<dd>Return multiple healthy resources  </dd>
+<dd>Up to 8 healthy records randomly selected  </dd>
+<dd>Simple load balancing with health checks</dd>
+</dl>
+<h2 id="health-checks">Health Checks</h2>
+<p><strong>Types</strong>
+- <strong>HTTP/HTTPS</strong>: Check web server health
+- <strong>TCP</strong>: Check port connectivity<br />
+- <strong>Calculated</strong>: Combine multiple health checks
+- <strong>CloudWatch Alarm</strong>: Based on CloudWatch metrics</p>
+<dl>
+<dt><strong>Configuration</strong></dt>
+<dd>Check interval: 30 seconds (standard) or 10 seconds (fast)  </dd>
+<dd>Failure threshold: Number of consecutive failures  </dd>
+<dd>Success threshold: Number of consecutive successes  </dd>
+<dd>Global health checkers from multiple regions</dd>
+<dt><strong>Health Check Locations</strong></dt>
+<dd>15+ global health checking locations  </dd>
+<dd>Majority must report healthy for overall healthy status  </dd>
+<dd>Can specify minimum number of health checkers</dd>
+</dl>
+<h2 id="private-dns">Private DNS</h2>
+<dl>
+<dt><strong>Private Hosted Zones</strong></dt>
+<dd>DNS resolution within VPC  </dd>
+<dd>Not accessible from internet  </dd>
+<dd>Override public DNS for internal resources</dd>
+<dt><strong>Requirements</strong></dt>
+<dd>enableDnsHostnames and enableDnsSupport must be true  </dd>
+<dd>Associate hosted zone with VPC  </dd>
+<dd>Can associate with multiple VPCs</dd>
+</dl>
+<h2 id="traffic-flow">Traffic Flow</h2>
+<dl>
+<dt><strong>Visual Editor</strong></dt>
+<dd>Drag-and-drop interface for complex routing  </dd>
+<dd>Version control for traffic policies  </dd>
+<dd>Can apply same policy to multiple domains</dd>
+<dt><strong>Traffic Policy</strong></dt>
+<dd>Reusable configuration for DNS routing  </dd>
+<dd>JSON-based policy definition  </dd>
+<dd>Supports all routing policies and health checks</dd>
+</dl>
+<h2 id="resolver">Resolver</h2>
+<dl>
+<dt><strong>DNS Resolver</strong></dt>
+<dd>Route 53 Resolver provides DNS resolution for VPC  </dd>
+<dd>Automatically enabled for all VPCs  </dd>
+<dd>Resolves AWS service names and custom domains</dd>
+<dt><strong>Resolver Endpoints</strong></dt>
+<dd>Inbound: External DNS servers query VPC resources  </dd>
+<dd>Outbound: VPC resources query external DNS servers  </dd>
+<dd>Useful for hybrid cloud DNS resolution</dd>
+</dl>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
-<li>Alias record only redirect to selected AWS resources (CloudFront, S3 static website hosting, Elastic Beanstalk, API Gateway, VPC endpoint, Global Accelerator), or orther record in the same Route53 hosted zone</li>
-<li>
-<p>Can create an alias record that has the same name as hosted zone (root domain)</p>
-</li>
-<li>
-<p>CNAME record can redirect to any URL, including AWS resources and external domains</p>
-</li>
-<li>
-<p>Cannot create a CNAME record that has the same name as hosted zone (root domain).</p>
-</li>
-<li>
-<p>Pricing: Alias record is free, CNAME record is charged as standard Route53 queries</p>
-</li>
+<li>Use Alias records for AWS resources when possible</li>
+<li>Implement health checks for critical resources</li>
+<li>Use appropriate TTL values (lower for dynamic content)</li>
+<li>Monitor DNS query patterns with Route 53 query logs</li>
+<li>Use private hosted zones for internal resources</li>
+<li>Implement DNS failover for high availability</li>
+<li>Consider latency-based routing for global applications</li>
+<li>Use weighted routing for gradual deployments</li>
 </ul>
 
 
@@ -1694,7 +1670,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

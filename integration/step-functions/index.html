@@ -20,7 +20,7 @@
     
     
       
-        <title>Step Functions - AWS Developer Associate Notes</title>
+        <title>Step Functions - AWS DVA-C02 Study Notes</title>
       
     
     
@@ -41,8 +41,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
       
     
     
@@ -58,12 +58,10 @@
   
     
     
-      
     
     
     
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#aws-step-function" class="md-skip">
+        <a href="#step-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -84,9 +82,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-header__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-header__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -100,7 +100,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            AWS Developer Associate Notes
+            AWS DVA-C02 Study Notes
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -114,33 +114,7 @@
     </div>
     
       
-        <form class="md-header__option" data-md-component="palette">
-  
     
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -194,276 +168,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  Home
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../compute/ec2/" class="md-tabs__link">
-          
-  
-  
-  Compute
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../storage/s3/" class="md-tabs__link">
-          
-  
-  
-  Storage
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security/iam/" class="md-tabs__link">
-          
-  
-  
-  Security
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../networking/api-gateway/" class="md-tabs__link">
-          
-  
-  
-  Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../security-networking/security-groups-nacls/" class="md-tabs__link">
-          
-  
-  
-  Security & Networking
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../database/dynamodb/" class="md-tabs__link">
-          
-  
-  
-  Database
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../messaging/sqs/" class="md-tabs__link">
-          
-  
-  
-  Messaging
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
-          
-  
-  
-  Integration
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../scaling/auto-scaling-groups/" class="md-tabs__link">
-          
-  
-  
-  Scaling
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../load-balancing/load-balancers/" class="md-tabs__link">
-          
-  
-  
-  Load Balancing
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../deployment/sam/" class="md-tabs__link">
-          
-  
-  
-  Deployment
-
-        </a>
-      </li>
-    
-  
-
-      
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../general/general/" class="md-tabs__link">
-          
-  
-  
-  General
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -477,18 +181,18 @@
                     
 
 
+
   
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="AWS Developer Associate Notes" class="md-nav__button md-logo" aria-label="AWS Developer Associate Notes" data-md-component="logo">
+    <a href="../.." title="AWS DVA-C02 Study Notes" class="md-nav__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    AWS Developer Associate Notes
+    AWS DVA-C02 Study Notes
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -526,19 +230,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -645,19 +349,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -718,19 +422,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -814,19 +518,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
   
@@ -933,19 +637,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   
@@ -1029,19 +733,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -1102,19 +806,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1203,9 +907,6 @@
         
         
       
-      
-        
-      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
@@ -1251,6 +952,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Step Functions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1262,6 +976,115 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#state-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-service-integrations" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Service Integrations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inputoutput-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input/Output Processing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring &amp; Debugging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1286,19 +1109,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
             
   
   
@@ -1359,19 +1182,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
             
   
   
@@ -1432,19 +1255,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   
@@ -1505,19 +1328,19 @@
     
     
       
-      
+        
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
             
   
   
@@ -1597,24 +1420,6 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
@@ -1624,21 +1429,150 @@
 
 
 
-<h1 id="aws-step-function">AWS Step Function</h1>
+<h1 id="step-functions">Step Functions</h1>
+<h2 id="overview">Overview</h2>
+<p><strong>Serverless workflow orchestration</strong> - Coordinate distributed applications and microservices<br />
+<strong>Visual workflows</strong> - Define business logic using visual workflows<br />
+<strong>AWS service integration</strong> - Connect AWS services without custom code<br />
+<strong>Built-in error handling</strong> - Automatic retry, catch, and rollback capabilities</p>
+<h2 id="core-concepts">Core Concepts</h2>
+<dl>
+<dt><strong>State Machine</strong></dt>
+<dd>JSON-based workflow definition (Amazon States Language)  </dd>
+<dd>Contains states that define workflow logic  </dd>
+<dd>Can be Standard or Express workflows</dd>
+<dt><strong>State</strong></dt>
+<dd>Individual step in workflow  </dd>
+<dd>Performs work, makes decisions, or waits  </dd>
+<dd>Receives input, processes it, and produces output</dd>
+<dt><strong>Execution</strong></dt>
+<dd>Instance of state machine processing input  </dd>
+<dd>Each execution has unique name and status  </dd>
+<dd>Can be monitored and debugged individually</dd>
+</dl>
+<h2 id="workflow-types">Workflow Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Use Case</th>
+<th>Duration</th>
+<th>Execution History</th>
+<th>Pricing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Standard</strong></td>
+<td>Long-running processes</td>
+<td>Up to 1 year</td>
+<td>Full history kept</td>
+<td>Per state transition</td>
+</tr>
+<tr>
+<td><strong>Express</strong></td>
+<td>High-volume, short-duration</td>
+<td>Up to 5 minutes</td>
+<td>CloudWatch Logs</td>
+<td>Per execution + duration</td>
+</tr>
+</tbody>
+</table>
+<h2 id="state-types">State Types</h2>
+<dl>
+<dt><strong>Pass</strong></dt>
+<dd>Transform input data or inject fixed data  </dd>
+<dd>Useful for testing and data manipulation  </dd>
+<dd>No work performed, just data transformation</dd>
+<dt><strong>Task</strong></dt>
+<dd>Single unit of work performed by AWS service  </dd>
+<dd>Lambda function, ECS task, SNS message, etc.  </dd>
+<dd>Can include retry and error handling</dd>
+<dt><strong>Choice</strong></dt>
+<dd>Branching logic based on input conditions  </dd>
+<dd>Multiple conditional branches  </dd>
+<dd>Default branch for unmatched conditions</dd>
+<dt><strong>Wait</strong></dt>
+<dd>Delay workflow for specified time  </dd>
+<dd>Seconds, timestamp, or seconds path  </dd>
+<dd>Useful for rate limiting or scheduled tasks</dd>
+<dt><strong>Parallel</strong></dt>
+<dd>Execute multiple branches simultaneously  </dd>
+<dd>All branches must complete successfully  </dd>
+<dd>Results combined into single array</dd>
+<dt><strong>Map</strong></dt>
+<dd>Process array of items in parallel  </dd>
+<dd>Execute same logic for each array item  </dd>
+<dd>Configurable concurrency limits</dd>
+<dt><strong>Succeed/Fail</strong></dt>
+<dd>Terminal states to end execution  </dd>
+<dd>Succeed: successful completion  </dd>
+<dd>Fail: error termination with cause/error</dd>
+</dl>
+<h2 id="error-handling">Error Handling</h2>
+<dl>
+<dt><strong>Retry</strong></dt>
+<dd>Automatic retry on errors  </dd>
+<dd>Configurable retry count and backoff  </dd>
+<dd>Supports exponential backoff and jitter</dd>
+<dt><strong>Catch</strong></dt>
+<dd>Handle specific error types  </dd>
+<dd>Redirect to different state on error  </dd>
+<dd>Can preserve error information</dd>
+</dl>
+<p><strong>Error Types</strong>
+- <code>States.ALL</code>: Catch all errors
+- <code>States.Timeout</code>: Task timeout
+- <code>States.TaskFailed</code>: Task execution failed
+- <code>States.Permissions</code>: Insufficient permissions
+- Custom error names from Lambda functions</p>
+<h2 id="aws-service-integrations">AWS Service Integrations</h2>
+<p><strong>Optimized Integrations</strong> (300+ AWS services)
+- Lambda: Invoke functions
+- ECS: Run tasks
+- SNS/SQS: Send messages
+- DynamoDB: Read/write data
+- S3: Object operations
+- Batch: Submit jobs</p>
+<p><strong>Service Integration Patterns</strong>
+- <strong>Request Response</strong>: Synchronous, wait for completion
+- <strong>Run a Job (.sync)</strong>: Wait for job completion
+- <strong>Wait for Callback (.waitForTaskToken)</strong>: Wait for external callback</p>
+<h2 id="inputoutput-processing">Input/Output Processing</h2>
+<p><strong>InputPath</strong>: Select portion of input to pass to state<br />
+<strong>OutputPath</strong>: Select portion of output to return<br />
+<strong>ResultPath</strong>: Where to place result in output<br />
+<strong>Parameters</strong>: Create new input using input data and literal values</p>
+<h2 id="monitoring-debugging">Monitoring &amp; Debugging</h2>
+<p><strong>Execution History</strong>: Detailed log of all state transitions<br />
+<strong>CloudWatch Integration</strong>: Metrics and logs for monitoring<br />
+<strong>X-Ray Tracing</strong>: Distributed tracing across services<br />
+<strong>Visual Console</strong>: Graphical execution tracking</p>
+<h2 id="use-cases">Use Cases</h2>
+<dl>
+<dt><strong>Data Processing Pipelines</strong></dt>
+<dd>ETL workflows with multiple steps  </dd>
+<dd>Error handling and retry logic  </dd>
+<dd>Coordinate AWS batch jobs</dd>
+<dt><strong>Microservices Orchestration</strong></dt>
+<dd>Coordinate multiple Lambda functions  </dd>
+<dd>Handle inter-service communication  </dd>
+<dd>Implement saga patterns</dd>
+<dt><strong>Human Approval Workflows</strong></dt>
+<dd>Wait for manual approval steps  </dd>
+<dd>Send notifications and wait for response  </dd>
+<dd>Route based on approval decisions</dd>
+</dl>
+<h2 id="best-practices">Best Practices</h2>
 <ul>
-<li>serverless function orchestrator</li>
-<li>sequence AWS Lambda functions and multiple AWS services into business-critical applications</li>
-</ul>
-<h1 id="consideration">Consideration</h1>
-<p>When to use Step Functions:</p>
-<ul>
-<li>highly scalable, auditable, and distributed applications</li>
-<li>support keep track of all tasks and events</li>
-</ul>
-<p>When to use SQS:</p>
-<ul>
-<li>reliable, highly-scalable queue for storing, sending, and receiving messages between distributed application components</li>
-<li>need to implement applicaiton-level tracking</li>
+<li>Keep state machines focused and modular</li>
+<li>Use appropriate workflow type (Standard vs Express)</li>
+<li>Implement proper error handling with retry/catch</li>
+<li>Use InputPath/OutputPath to minimize data transfer</li>
+<li>Monitor executions with CloudWatch and X-Ray</li>
+<li>Design for idempotency in all states</li>
+<li>Use Map state for parallel array processing</li>
+<li>Keep state machine definitions under version control</li>
 </ul>
 
 
@@ -1694,7 +1628,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
