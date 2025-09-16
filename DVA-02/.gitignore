@@ -1,0 +1,20 @@
+# MkDocs build output
+site/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment
+.env
+.venv
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Copilot context file
+docs/general/copilot-context.md
+copilot-context.md

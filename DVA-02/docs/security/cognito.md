@@ -41,3 +41,5 @@
   - SAML Identity providers
   - Developer Authenticated identities
 - Note: To save user information, identity pools need to be integrated with user pools
+
+- We can create an identity based policy that allows Amazon Cognito users to access specific AWS resources like S3 or DynamoDB.
