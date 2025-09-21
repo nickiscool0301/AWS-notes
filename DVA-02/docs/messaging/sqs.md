@@ -1,6 +1,7 @@
 # SQS (Simple Queue Service)
 
 ## Overview
+
 **Fully managed message queuing** - Reliable, scalable message queue service  
 **Decouple components** - Separate producers and consumers  
 **Two queue types** - Standard and FIFO queues  
@@ -8,13 +9,13 @@
 
 ## Queue Types
 
-| Feature | Standard Queue | FIFO Queue |
-|---------|---------------|-------------|
-| **Delivery** | At-least-once delivery | Exactly-once processing |
-| **Ordering** | Best-effort ordering | Strict FIFO ordering |
-| **Throughput** | Nearly unlimited | 300 messages/sec (3,000 with batching) |
-| **Duplicates** | Occasional duplicates | No duplicates |
-| **Name** | Any name | Must end with `.fifo` |
+| Feature        | Standard Queue         | FIFO Queue                             |
+| -------------- | ---------------------- | -------------------------------------- |
+| **Delivery**   | At-least-once delivery | Exactly-once processing                |
+| **Ordering**   | Best-effort ordering   | Strict FIFO ordering                   |
+| **Throughput** | Nearly unlimited       | 300 messages/sec (3,000 with batching) |
+| **Duplicates** | Occasional duplicates  | No duplicates                          |
+| **Name**       | Any name               | Must end with `.fifo`                  |
 
 ## Core Concepts
 
@@ -61,12 +62,16 @@
 
 **Long Polling vs Short Polling**
 
-| Type | Wait Time | API Calls | Cost | Use Case |
-|------|-----------|-----------|------|----------|
-| **Long Polling** | 1-20 seconds | Fewer calls | Lower cost | Recommended default |
-| **Short Polling** | 0 seconds | More calls | Higher cost | Immediate response needed |
+| Type              | Wait Time    | API Calls   | Cost        | Use Case                  |
+| ----------------- | ------------ | ----------- | ----------- | ------------------------- |
+| **Long Polling**  | 1-20 seconds | Fewer calls | Lower cost  | Recommended default       |
+| **Short Polling** | 0 seconds    | More calls  | Higher cost | Immediate response needed |
 
 ## FIFO Queue Features
+
+Message parameters for FIFO queues:
+
+- MessageGroupId (required)
 
 **Message Groups**
 : Messages with same group ID processed in order  
@@ -81,12 +86,14 @@
 ## Limits and Quotas
 
 **Message Limits**
+
 - **Size**: 1 byte to 256KB per message
-- **Retention**: 1 minute to 14 days (default: 4 days)  
+- **Retention**: 1 minute to 14 days (default: 4 days)
 - **Receive count**: Track how many times message received
 - **In-flight messages**: 120,000 (Standard), 20,000 (FIFO)
 
 **Queue Limits**
+
 - **Name length**: 80 characters maximum
 - **Queues per region**: 1 million (soft limit)
 - **Message batch size**: 10 messages per batch
@@ -136,14 +143,16 @@
 ## CloudWatch Integration
 
 **Metrics Available**
+
 - `ApproximateNumberOfMessages`: Messages available
-- `ApproximateNumberOfMessagesVisible`: Messages not being processed  
+- `ApproximateNumberOfMessagesVisible`: Messages not being processed
 - `ApproximateAgeOfOldestMessage`: Age of oldest message
 - `NumberOfMessagesSent`: Messages added to queue
 - `NumberOfMessagesReceived`: Messages retrieved
 - `NumberOfMessagesDeleted`: Messages removed
 
 ## Best Practices
+
 - Use long polling to reduce costs and improve efficiency
 - Set appropriate visibility timeout based on processing time
 - Always delete messages after successful processing
@@ -153,3 +162,7 @@
 - Use FIFO queues only when strict ordering is required
 - Design for idempotent message processing
 - Configure appropriate retention periods for your use case
+
+## Note
+
+- To manage large Amazon Simple Queue Service (Amazon SQS) messages, you can use Amazon Simple Storage Service (Amazon S3) and the **Amazon SQS Extended Client** Library for Java. This is especially useful for storing and consuming messages up to 2 GB. Unless your application requires repeatedly creating queues and leaving them inactive or storing large amounts of data in your queues, consider using Amazon S3 for storing your data.

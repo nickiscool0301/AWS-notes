@@ -30,6 +30,7 @@ nav:
   - Home: index.md
   - Compute:
       - EC2: compute/ec2.md
+      - EBS: compute/ebs.md
       - Lambda: compute/lambda.md
       - Elastic Beanstalk: compute/elastic-beanstalk.md
   - Storage:
@@ -55,6 +56,8 @@ nav:
       - Auto Scaling Groups: scaling/auto-scaling-groups.md
   - Load Balancing:
       - Load Balancers: load-balancing/load-balancers.md
+  - Debug:
+      - X-Ray: debug/xray.md
   - Deployment:
       - SAM (Serverless Application Model): deployment/sam.md
   - General:
