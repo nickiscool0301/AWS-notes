@@ -9,10 +9,6 @@
       
       
       
-        <link rel="prev" href="../../compute/elastic-beanstalk/">
-      
-      
-        <link rel="next" href="../../security/iam/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +16,7 @@
     
     
       
-        <title>S3 - AWS DVA-C02 Study Notes</title>
+        <title>AWS Amplify - AWS DVA-C02 Study Notes</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#s3-simple-storage-service" class="md-skip">
+        <a href="#aws-amplify" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              S3
+              AWS Amplify
             
           </span>
         </div>
@@ -242,13 +238,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../storage/s3/" class="md-tabs__link">
           
   
   
@@ -448,7 +442,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../deployment/sam/" class="md-tabs__link">
+        <a href="../sam/" class="md-tabs__link">
           
   
   
@@ -691,31 +685,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -728,7 +719,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Storage
@@ -739,32 +730,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    S3
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../storage/s3/" class="md-nav__link">
         
   
   
@@ -775,98 +744,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#storage-classes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Storage Classes
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encryption" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encryption
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#replication" class="md-nav__link">
-    <span class="md-ellipsis">
-      Replication
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#versioning" class="md-nav__link">
-    <span class="md-ellipsis">
-      Versioning
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#lifecycle-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lifecycle Management
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Control
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#access-point" class="md-nav__link">
-    <span class="md-ellipsis">
-      Access Point
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1790,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../deployment/sam/" class="md-nav__link">
+      <a href="../sam/" class="md-nav__link">
         
   
   
@@ -1927,99 +1804,50 @@
 
 
 
-<h1 id="s3-simple-storage-service">S3 (Simple Storage Service)<a class="headerlink" href="#s3-simple-storage-service" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><strong>Object storage</strong> - Store and retrieve any amount of data<br />
-<strong>Durability</strong>: 99.999999999% (11 9's)<br />
-<strong>Availability</strong>: 99.95% - 99.99% depending on storage class<br />
-<strong>Globally unique bucket names</strong></p>
-<h2 id="storage-classes">Storage Classes<a class="headerlink" href="#storage-classes" title="Permanent link">&para;</a></h2>
+<h1 id="aws-amplify">AWS Amplify<a class="headerlink" href="#aws-amplify" title="Permanent link">&para;</a></h1>
+<p>AWS Amplify is a <strong>purpose-built platform for static site hosting with Git integration</strong>. It provides a complete solution for deploying and managing modern web applications.</p>
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<h3 id="git-integration">Git Integration<a class="headerlink" href="#git-integration" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Standard</strong>: General purpose, frequently accessed</li>
-<li><strong>Standard-IA</strong>: Infrequent access, lower cost</li>
-<li><strong>One Zone-IA</strong>: Single AZ, lower cost than Standard-IA</li>
-<li><strong>Glacier Instant</strong>: Archive with millisecond retrieval</li>
-<li><strong>Glacier Flexible</strong>: Archive with minutes to hours retrieval</li>
-<li><strong>Glacier Deep Archive</strong>: Archive with 12 hours retrieval</li>
-<li><strong>Intelligent-Tiering</strong>: Automatically moves data between tiers</li>
+<li>Direct integration with Git repositories (GitHub, GitLab, Bitbucket, CodeCommit)</li>
+<li>Automatic deployments triggered by Git commits</li>
+<li><strong>Provisions environments mapped to branches</strong> for seamless development workflows</li>
 </ul>
-<h2 id="encryption">Encryption<a class="headerlink" href="#encryption" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Key Management</th>
-<th>Use Case</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>SSE-S3</strong></td>
-<td>AWS managed (AES-256)</td>
-<td>Default encryption</td>
-</tr>
-<tr>
-<td><strong>SSE-KMS</strong></td>
-<td>AWS KMS</td>
-<td>Audit trails, key rotation</td>
-</tr>
-<tr>
-<td><strong>SSE-C</strong></td>
-<td>Customer provided</td>
-<td>Full key control</td>
-</tr>
-<tr>
-<td><strong>CSE</strong></td>
-<td>Client-side</td>
-<td>Encrypt before upload</td>
-</tr>
-</tbody>
-</table>
-<dl>
-<dt><strong>SSE-S3 (Server-Side Encryption)</strong></dt>
-<dd>AWS manages keys automatically  </dd>
-<dd>Default encryption option</dd>
-<dt><strong>SSE-KMS (Key Management Service)</strong></dt>
-<dd>AWS managed or customer managed keys  </dd>
-<dd>Provides audit trails and key rotation</dd>
-<dt><strong>SSE-C (Customer-Provided Keys)</strong></dt>
-<dd>You provide keys with each request  </dd>
-<dd>AWS doesn't store keys</dd>
-<dt><strong>CSE (Client-Side Encryption)</strong></dt>
-<dd>Encrypt data before uploading  </dd>
-<dd>Full responsibility for key management</dd>
-</dl>
-<h2 id="replication">Replication<a class="headerlink" href="#replication" title="Permanent link">&para;</a></h2>
-<p><strong>Same Region Replication (SRR)</strong>: Within same region<br />
-<strong>Cross-Region Replication (CRR)</strong>: Across different regions<br />
-<strong>Requirements</strong>: Versioning enabled on both buckets<br />
-<strong>Note</strong>: Lifecycle policies not replicated</p>
-<h2 id="versioning">Versioning<a class="headerlink" href="#versioning" title="Permanent link">&para;</a></h2>
+<h3 id="hosting-security">Hosting &amp; Security<a class="headerlink" href="#hosting-security" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Multiple versions of same object</li>
-<li>Protects against accidental deletion</li>
-<li>Each version has unique version ID</li>
-<li>Can suspend but not disable once enabled</li>
+<li><strong>Provides HTTPS by default</strong> with automatic SSL certificate provisioning</li>
+<li>Global CDN distribution for fast content delivery</li>
+<li>Custom domain support with Route 53 integration</li>
 </ul>
-<h2 id="lifecycle-management">Lifecycle Management<a class="headerlink" href="#lifecycle-management" title="Permanent link">&para;</a></h2>
+<h3 id="serverless-architecture">Serverless Architecture<a class="headerlink" href="#serverless-architecture" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Transition objects between storage classes</li>
-<li>Delete objects after specified time</li>
-<li>Apply to specific prefixes or tags</li>
-<li>Cost optimization tool</li>
+<li><strong>Serverless backend services</strong> including:</li>
+<li>Authentication (Cognito)</li>
+<li>APIs (GraphQL/REST via AppSync/API Gateway)</li>
+<li>Storage (S3, DynamoDB)</li>
+<li>Functions (Lambda)</li>
 </ul>
-<h2 id="access-control">Access Control<a class="headerlink" href="#access-control" title="Permanent link">&para;</a></h2>
+<h3 id="environment-management">Environment Management<a class="headerlink" href="#environment-management" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Bucket Policies</strong>: JSON-based bucket-level access</li>
-<li><strong>ACLs</strong>: Object and bucket level access (legacy)</li>
-<li><strong>IAM Policies</strong>: User/role-based access</li>
-<li><strong>Pre-signed URLs</strong>: Temporary access to objects</li>
+<li>Branch-based deployments</li>
+<li>Environment variables per branch</li>
+<li>Preview deployments for pull requests</li>
+<li>Atomic deployments with instant rollbacks</li>
 </ul>
-<h2 id="access-point">Access Point<a class="headerlink" href="#access-point" title="Permanent link">&para;</a></h2>
+<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
 <ul>
-<li>An S3 Object Lambda Access Point is a new type of S3 Access Point that allows you to process data retrieved from S3 before returning it to an application.
-Eg: </li>
-<li>We can store user details with PII in S3, then use S3 Object Lambda to redact PII when accessed by applications without permission to view it.</li>
+<li>Single Page Applications (React, Vue, Angular)</li>
+<li>Static site generators (Gatsby, Next.js, Hugo)</li>
+<li>JAMstack applications</li>
+<li>Progressive Web Apps (PWAs)</li>
+</ul>
+<h2 id="benefits">Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Zero-configuration deployments</li>
+<li>Built-in CI/CD pipeline</li>
+<li>Automatic scaling</li>
+<li>Pay-per-use pricing</li>
+<li>Integrated monitoring and analytics</li>
 </ul>
 
 
