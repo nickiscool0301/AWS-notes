@@ -69,7 +69,7 @@
     - keep a fixed number of instance always warm: initialize the exec env before the request comes in
 
 ## Good to Know
+Moving Lambda from AWS console to AWS CloudFormation:
 
-- Moving Lambda from AWS console to AWS CloudFormation:
-  - Upload all code as a zip to S3, and refer the object in AWS::Lambda::Function block
-  - Write AWS Lambda code inline in CloudFormation in AWS::Lambda::Function block as long as there are no 3rd-party dependencies
+- Upload all code as a zip to S3, and refer the object in AWS::Lambda::Function block
+- Write AWS Lambda code inline in CloudFormation in AWS::Lambda::Function block as long as there are no 3rd-party dependencies

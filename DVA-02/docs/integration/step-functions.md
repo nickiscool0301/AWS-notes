@@ -141,3 +141,7 @@
 - Design for idempotency in all states
 - Use Map state for parallel array processing
 - Keep state machine definitions under version control
+
+## Keywords
+- ochestration service
+- manage and automate workflows

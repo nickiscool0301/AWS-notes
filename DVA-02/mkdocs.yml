@@ -4,27 +4,60 @@ theme:
   features:
     - navigation.sections
     - navigation.top
+    - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
     - search.highlight
+    - search.suggest
     - toc.integrate
+    - content.code.copy
+    - content.tooltips
   palette:
-    scheme: default
-    primary: indigo
-    accent: blue
+    - scheme: default
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: blue grey
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   font:
-    text: Inter
-    code: JetBrains Mono
+    text: Roboto
+    code: Roboto Mono
+  icon:
+    repo: fontawesome/brands/github
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
   - pymdownx.superfences
+  - pymdownx.snippets
   - admonition
+  - pymdownx.details
   - tables
   - attr_list
   - md_in_html
   - pymdownx.keys
   - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.tilde
   - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+      toc_depth: 3
 
 nav:
   - Home: index.md
@@ -38,6 +71,8 @@ nav:
   - Security:
       - IAM: security/iam.md
       - Cognito: security/cognito.md
+      - KMS: security/kms.md
+      - Security Manager: security/security-manager.md
   - Networking:
       - API Gateway: networking/api-gateway.md
       - CloudFront: networking/cloudfront.md
@@ -47,6 +82,7 @@ nav:
       - HTTPS: security-networking/https.md
   - Database:
       - DynamoDB: database/dynamodb.md
+      - RDS: database/rds.md
   - Messaging:
       - SQS: messaging/sqs.md
       - Kinesis: messaging/kinesis.md

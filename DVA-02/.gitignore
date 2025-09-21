@@ -18,3 +18,5 @@ venv/
 # Copilot context file
 docs/general/copilot-context.md
 copilot-context.md
+
+CLAUDE.md
