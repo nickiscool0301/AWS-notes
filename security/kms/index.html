@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../../messaging/kinesis/">
+        <link rel="prev" href="../cognito/">
       
       
-        <link rel="next" href="../../scaling/auto-scaling-groups/">
+        <link rel="next" href="../security-manager/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Step Functions - AWS DVA-C02 Study Notes</title>
+        <title>KMS - AWS DVA-C02 Study Notes</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#step-functions" class="md-skip">
+        <a href="#aws-kms-key-management-service" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Step Functions
+              KMS
             
           </span>
         </div>
@@ -262,11 +262,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../security/iam/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../iam/" class="md-tabs__link">
           
   
   
@@ -362,13 +364,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../integration/step-functions/" class="md-tabs__link">
           
   
   
@@ -766,28 +766,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   
@@ -800,7 +803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Security
@@ -814,7 +817,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/iam/" class="md-nav__link">
+      <a href="../iam/" class="md-nav__link">
         
   
   
@@ -837,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/cognito/" class="md-nav__link">
+      <a href="../cognito/" class="md-nav__link">
         
   
   
@@ -857,10 +860,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../security/kms/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    KMS
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -871,6 +896,191 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-kms" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is KMS?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#customer-managed-keys-cmk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customer Managed Keys (CMK)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-managed-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Managed Keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-owned-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Owned Keys
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#encrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Encrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decrypt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decrypt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generatedatakey" class="md-nav__link">
+    <span class="md-ellipsis">
+      GenerateDataKey
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generatedatakeywithoutplaintext" class="md-nav__link">
+    <span class="md-ellipsis">
+      GenerateDataKeyWithoutPlaintext
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#envelope-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Envelope Encryption
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multi-region-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Region Keys
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Rotation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Limits
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Use Cases
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -883,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/security-manager/" class="md-nav__link">
+      <a href="../security-manager/" class="md-nav__link">
         
   
   
@@ -1325,31 +1535,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1362,7 +1569,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Integration
@@ -1373,32 +1580,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Step Functions
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../integration/step-functions/" class="md-nav__link">
         
   
   
@@ -1409,125 +1594,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-concepts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Concepts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#workflow-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      Workflow Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#state-types" class="md-nav__link">
-    <span class="md-ellipsis">
-      State Types
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#error-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error Handling
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aws-service-integrations" class="md-nav__link">
-    <span class="md-ellipsis">
-      AWS Service Integrations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#inputoutput-processing" class="md-nav__link">
-    <span class="md-ellipsis">
-      Input/Output Processing
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#monitoring-debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Monitoring &amp; Debugging
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#use-cases" class="md-nav__link">
-    <span class="md-ellipsis">
-      Use Cases
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      Best Practices
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#keywords" class="md-nav__link">
-    <span class="md-ellipsis">
-      Keywords
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1954,155 +2020,106 @@
 
 
 
-<h1 id="step-functions">Step Functions<a class="headerlink" href="#step-functions" title="Permanent link">&para;</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p><strong>Serverless workflow orchestration</strong> - Coordinate distributed applications and microservices<br />
-<strong>Visual workflows</strong> - Define business logic using visual workflows<br />
-<strong>AWS service integration</strong> - Connect AWS services without custom code<br />
-<strong>Built-in error handling</strong> - Automatic retry, catch, and rollback capabilities</p>
-<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
-<dl>
-<dt><strong>State Machine</strong></dt>
-<dd>JSON-based workflow definition (Amazon States Language)  </dd>
-<dd>Contains states that define workflow logic  </dd>
-<dd>Can be Standard or Express workflows</dd>
-<dt><strong>State</strong></dt>
-<dd>Individual step in workflow  </dd>
-<dd>Performs work, makes decisions, or waits  </dd>
-<dd>Receives input, processes it, and produces output</dd>
-<dt><strong>Execution</strong></dt>
-<dd>Instance of state machine processing input  </dd>
-<dd>Each execution has unique name and status  </dd>
-<dd>Can be monitored and debugged individually</dd>
-</dl>
-<h2 id="workflow-types">Workflow Types<a class="headerlink" href="#workflow-types" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Type</th>
-<th>Use Case</th>
-<th>Duration</th>
-<th>Execution History</th>
-<th>Pricing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Standard</strong></td>
-<td>Long-running processes</td>
-<td>Up to 1 year</td>
-<td>Full history kept</td>
-<td>Per state transition</td>
-</tr>
-<tr>
-<td><strong>Express</strong></td>
-<td>High-volume, short-duration</td>
-<td>Up to 5 minutes</td>
-<td>CloudWatch Logs</td>
-<td>Per execution + duration</td>
-</tr>
-</tbody>
-</table>
-<h2 id="state-types">State Types<a class="headerlink" href="#state-types" title="Permanent link">&para;</a></h2>
-<dl>
-<dt><strong>Pass</strong></dt>
-<dd>Transform input data or inject fixed data  </dd>
-<dd>Useful for testing and data manipulation  </dd>
-<dd>No work performed, just data transformation</dd>
-<dt><strong>Task</strong></dt>
-<dd>Single unit of work performed by AWS service  </dd>
-<dd>Lambda function, ECS task, SNS message, etc.  </dd>
-<dd>Can include retry and error handling</dd>
-<dt><strong>Choice</strong></dt>
-<dd>Branching logic based on input conditions  </dd>
-<dd>Multiple conditional branches  </dd>
-<dd>Default branch for unmatched conditions</dd>
-<dt><strong>Wait</strong></dt>
-<dd>Delay workflow for specified time  </dd>
-<dd>Seconds, timestamp, or seconds path  </dd>
-<dd>Useful for rate limiting or scheduled tasks</dd>
-<dt><strong>Parallel</strong></dt>
-<dd>Execute multiple branches simultaneously  </dd>
-<dd>All branches must complete successfully  </dd>
-<dd>Results combined into single array</dd>
-<dt><strong>Map</strong></dt>
-<dd>Process array of items in parallel  </dd>
-<dd>Execute same logic for each array item  </dd>
-<dd>Configurable concurrency limits</dd>
-<dt><strong>Succeed/Fail</strong></dt>
-<dd>Terminal states to end execution  </dd>
-<dd>Succeed: successful completion  </dd>
-<dd>Fail: error termination with cause/error</dd>
-</dl>
-<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
-<dl>
-<dt><strong>Retry</strong></dt>
-<dd>Automatic retry on errors  </dd>
-<dd>Configurable retry count and backoff  </dd>
-<dd>Supports exponential backoff and jitter</dd>
-<dt><strong>Catch</strong></dt>
-<dd>Handle specific error types  </dd>
-<dd>Redirect to different state on error  </dd>
-<dd>Can preserve error information</dd>
-</dl>
-<p><strong>Error Types</strong>
-- <code>States.ALL</code>: Catch all errors
-- <code>States.Timeout</code>: Task timeout
-- <code>States.TaskFailed</code>: Task execution failed
-- <code>States.Permissions</code>: Insufficient permissions
-- Custom error names from Lambda functions</p>
-<h2 id="aws-service-integrations">AWS Service Integrations<a class="headerlink" href="#aws-service-integrations" title="Permanent link">&para;</a></h2>
-<p><strong>Optimized Integrations</strong> (300+ AWS services)
-- Lambda: Invoke functions
-- ECS: Run tasks
-- SNS/SQS: Send messages
-- DynamoDB: Read/write data
-- S3: Object operations
-- Batch: Submit jobs</p>
-<p><strong>Service Integration Patterns</strong>
-- <strong>Request Response</strong>: Synchronous, wait for completion
-- <strong>Run a Job (.sync)</strong>: Wait for job completion
-- <strong>Wait for Callback (.waitForTaskToken)</strong>: Wait for external callback</p>
-<h2 id="inputoutput-processing">Input/Output Processing<a class="headerlink" href="#inputoutput-processing" title="Permanent link">&para;</a></h2>
-<p><strong>InputPath</strong>: Select portion of input to pass to state<br />
-<strong>OutputPath</strong>: Select portion of output to return<br />
-<strong>ResultPath</strong>: Where to place result in output<br />
-<strong>Parameters</strong>: Create new input using input data and literal values</p>
-<h2 id="monitoring-debugging">Monitoring &amp; Debugging<a class="headerlink" href="#monitoring-debugging" title="Permanent link">&para;</a></h2>
-<p><strong>Execution History</strong>: Detailed log of all state transitions<br />
-<strong>CloudWatch Integration</strong>: Metrics and logs for monitoring<br />
-<strong>X-Ray Tracing</strong>: Distributed tracing across services<br />
-<strong>Visual Console</strong>: Graphical execution tracking</p>
-<h2 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">&para;</a></h2>
-<dl>
-<dt><strong>Data Processing Pipelines</strong></dt>
-<dd>ETL workflows with multiple steps  </dd>
-<dd>Error handling and retry logic  </dd>
-<dd>Coordinate AWS batch jobs</dd>
-<dt><strong>Microservices Orchestration</strong></dt>
-<dd>Coordinate multiple Lambda functions  </dd>
-<dd>Handle inter-service communication  </dd>
-<dd>Implement saga patterns</dd>
-<dt><strong>Human Approval Workflows</strong></dt>
-<dd>Wait for manual approval steps  </dd>
-<dd>Send notifications and wait for response  </dd>
-<dd>Route based on approval decisions</dd>
-</dl>
+<h1 id="aws-kms-key-management-service">AWS KMS (Key Management Service)<a class="headerlink" href="#aws-kms-key-management-service" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-kms">What is KMS?<a class="headerlink" href="#what-is-kms" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Managed service for encryption keys</li>
+<li>Creates and controls encryption keys used to encrypt data</li>
+<li>Integrated with most AWS services</li>
+</ul>
+<h2 id="key-types">Key Types<a class="headerlink" href="#key-types" title="Permanent link">&para;</a></h2>
+<h3 id="customer-managed-keys-cmk">Customer Managed Keys (CMK)<a class="headerlink" href="#customer-managed-keys-cmk" title="Permanent link">&para;</a></h3>
+<ul>
+<li>You create, own, and manage</li>
+<li>Can enable/disable, rotate, delete</li>
+<li>Cost: $1/month per key + usage</li>
+</ul>
+<h3 id="aws-managed-keys">AWS Managed Keys<a class="headerlink" href="#aws-managed-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Created/managed by AWS services</li>
+<li>Free to use</li>
+<li>Automatic rotation every year</li>
+<li>Cannot delete or manage directly</li>
+</ul>
+<h3 id="aws-owned-keys">AWS Owned Keys<a class="headerlink" href="#aws-owned-keys" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Used by AWS services internally</li>
+<li>No additional cost</li>
+<li>Not visible in your account</li>
+</ul>
+<h2 id="key-operations">Key Operations<a class="headerlink" href="#key-operations" title="Permanent link">&para;</a></h2>
+<h3 id="encrypt">Encrypt<a class="headerlink" href="#encrypt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Encrypt data up to 4KB directly</li>
+<li>Returns ciphertext</li>
+</ul>
+<h3 id="decrypt">Decrypt<a class="headerlink" href="#decrypt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Decrypt ciphertext</li>
+<li>Must have permission to use the key</li>
+</ul>
+<h3 id="generatedatakey">GenerateDataKey<a class="headerlink" href="#generatedatakey" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Creates data encryption key (DEK)</li>
+<li>Returns plaintext + encrypted version</li>
+<li>Use plaintext to encrypt, store encrypted version</li>
+</ul>
+<h3 id="generatedatakeywithoutplaintext">GenerateDataKeyWithoutPlaintext<a class="headerlink" href="#generatedatakeywithoutplaintext" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Returns only encrypted data key</li>
+<li>Use with Decrypt to get plaintext key</li>
+</ul>
+<h2 id="envelope-encryption">Envelope Encryption<a class="headerlink" href="#envelope-encryption" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Encrypt data with Data Encryption Key (DEK)</li>
+<li>Encrypt DEK with KMS Customer Master Key (CMK)</li>
+<li>Store encrypted data + encrypted DEK together</li>
+<li>Decrypt: Use KMS to decrypt DEK, then decrypt data</li>
+</ul>
+<h2 id="key-policies">Key Policies<a class="headerlink" href="#key-policies" title="Permanent link">&para;</a></h2>
+<ul>
+<li>JSON-based access control</li>
+<li>Similar to IAM policies</li>
+<li>Default policy gives root user full access</li>
+<li>Can grant cross-account access</li>
+</ul>
+<h2 id="multi-region-keys">Multi-Region Keys<a class="headerlink" href="#multi-region-keys" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Same key ID across multiple regions</li>
+<li>Replicated automatically</li>
+<li>Each region has independent key material</li>
+<li>Useful for global applications</li>
+</ul>
+<h2 id="key-rotation">Key Rotation<a class="headerlink" href="#key-rotation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Automatic rotation available for CMKs</li>
+<li>Rotates every year</li>
+<li>Old key versions remain available for decryption</li>
+<li>Cannot rotate imported key material</li>
+</ul>
+<h2 id="important-limits">Important Limits<a class="headerlink" href="#important-limits" title="Permanent link">&para;</a></h2>
+<ul>
+<li>4KB max data size for direct encryption</li>
+<li>Regional service</li>
+<li>API request limits apply</li>
+<li>Key policies max 32KB</li>
+</ul>
+<h2 id="common-use-cases">Common Use Cases<a class="headerlink" href="#common-use-cases" title="Permanent link">&para;</a></h2>
+<ul>
+<li>EBS volume encryption</li>
+<li>S3 bucket encryption</li>
+<li>RDS encryption</li>
+<li>Lambda environment variables</li>
+<li>Parameter Store SecureString</li>
+<li>Secrets Manager</li>
+</ul>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Keep state machines focused and modular</li>
-<li>Use appropriate workflow type (Standard vs Express)</li>
-<li>Implement proper error handling with retry/catch</li>
-<li>Use InputPath/OutputPath to minimize data transfer</li>
-<li>Monitor executions with CloudWatch and X-Ray</li>
-<li>Design for idempotency in all states</li>
-<li>Use Map state for parallel array processing</li>
-<li>Keep state machine definitions under version control</li>
-</ul>
-<h2 id="keywords">Keywords<a class="headerlink" href="#keywords" title="Permanent link">&para;</a></h2>
-<ul>
-<li>ochestration service</li>
-<li>manage and automate workflows</li>
+<li>Use least privilege access</li>
+<li>Enable key rotation</li>
+<li>Monitor key usage with CloudTrail</li>
+<li>Use separate keys for different applications</li>
+<li>Consider cross-region replication needs</li>
 </ul>
 
 

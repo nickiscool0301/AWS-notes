@@ -12,7 +12,7 @@
         <link rel="prev" href="../../security-networking/https/">
       
       
-        <link rel="next" href="../../messaging/sqs/">
+        <link rel="next" href="../rds/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -41,10 +41,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -58,10 +60,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="orange">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -84,7 +88,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="AWS DVA-C02 Study Notes" class="md-header__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
@@ -114,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -143,6 +173,8 @@
         </button>
       </nav>
       
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
@@ -161,13 +193,303 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../compute/ec2/" class="md-tabs__link">
+          
+  
+  
+  Compute
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../storage/s3/" class="md-tabs__link">
+          
+  
+  
+  Storage
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../security/iam/" class="md-tabs__link">
+          
+  
+  
+  Security
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../networking/api-gateway/" class="md-tabs__link">
+          
+  
+  
+  Networking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../security-networking/security-groups-nacls/" class="md-tabs__link">
+          
+  
+  
+  Security & Networking
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Database
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../messaging/sqs/" class="md-tabs__link">
+          
+  
+  
+  Messaging
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../integration/step-functions/" class="md-tabs__link">
+          
+  
+  
+  Integration
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../scaling/auto-scaling-groups/" class="md-tabs__link">
+          
+  
+  
+  Scaling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../load-balancing/load-balancers/" class="md-tabs__link">
+          
+  
+  
+  Load Balancing
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../debug/xray/" class="md-tabs__link">
+          
+  
+  
+  Debug
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../deployment/sam/" class="md-tabs__link">
+          
+  
+  
+  Deployment
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../general/general/" class="md-tabs__link">
+          
+  
+  
+  General
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -181,10 +503,12 @@
                     
 
 
+  
+
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="AWS DVA-C02 Study Notes" class="md-nav__button md-logo" aria-label="AWS DVA-C02 Study Notes" data-md-component="logo">
       
@@ -230,19 +554,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -275,6 +601,29 @@
   
   <span class="md-ellipsis">
     EC2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../compute/ebs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    EBS
     
   </span>
   
@@ -349,19 +698,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -422,19 +773,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   
@@ -500,6 +853,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/kms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    KMS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../security/security-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security Manager
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -518,19 +917,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -637,19 +1038,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   
@@ -736,6 +1139,9 @@
     
       
         
+        
+      
+      
         
       
     
@@ -958,6 +1364,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RDS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -976,19 +1405,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   
@@ -1072,19 +1503,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   
@@ -1145,19 +1578,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   
@@ -1218,19 +1653,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   
@@ -1291,19 +1728,96 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Debug
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Debug
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../debug/xray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X-Ray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
             
   
   
@@ -1316,8 +1830,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_12">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Deployment
           </label>
@@ -1364,19 +1878,21 @@
     
     
       
-        
+      
         
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -1389,8 +1905,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             General
           </label>
@@ -1465,13 +1981,13 @@
 
 
 
-<h1 id="dynamodb">DynamoDB</h1>
-<h2 id="overview">Overview</h2>
+<h1 id="dynamodb">DynamoDB<a class="headerlink" href="#dynamodb" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p><strong>NoSQL database</strong> - Fast, flexible, serverless database service<br />
 <strong>Fully managed</strong> - No servers to manage, automatic scaling<br />
 <strong>Single-digit millisecond latency</strong> - High-performance at any scale<br />
 <strong>Global distribution</strong> - Multi-region replication available</p>
-<h2 id="core-concepts">Core Concepts</h2>
+<h2 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h2>
 <dl>
 <dt><strong>Table</strong></dt>
 <dd>Collection of data items  </dd>
@@ -1486,7 +2002,7 @@
 <dd>Name-value pair  </dd>
 <dd>Scalar, document, or set data types</dd>
 </dl>
-<h2 id="primary-keys">Primary Keys</h2>
+<h2 id="primary-keys">Primary Keys<a class="headerlink" href="#primary-keys" title="Permanent link">&para;</a></h2>
 <dl>
 <dt><strong>Partition Key (Simple Primary Key)</strong></dt>
 <dd>Single attribute primary key  </dd>
@@ -1497,7 +2013,7 @@
 <dd>Partition key groups items, sort key orders within partition  </dd>
 <dd>Combination must be unique</dd>
 </dl>
-<h2 id="data-types">Data Types</h2>
+<h2 id="data-types">Data Types<a class="headerlink" href="#data-types" title="Permanent link">&para;</a></h2>
 <p><strong>Scalar Types</strong>
 - <strong>String (S)</strong>: Unicode text
 - <strong>Number (N)</strong>: Positive/negative numbers<br />
@@ -1511,7 +2027,7 @@
 - <strong>String Set (SS)</strong>: Set of strings
 - <strong>Number Set (NS)</strong>: Set of numbers
 - <strong>Binary Set (BS)</strong>: Set of binary values</p>
-<h2 id="secondary-indexes">Secondary Indexes</h2>
+<h2 id="secondary-indexes">Secondary Indexes<a class="headerlink" href="#secondary-indexes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1547,7 +2063,7 @@
 <dd><strong>Include</strong> - Keys plus specified attributes  </dd>
 <dd><strong>All</strong> - All attributes (highest cost)</dd>
 </dl>
-<h2 id="consistency-models">Consistency Models</h2>
+<h2 id="consistency-models">Consistency Models<a class="headerlink" href="#consistency-models" title="Permanent link">&para;</a></h2>
 <dl>
 <dt><strong>Eventually Consistent Reads</strong> (Default)</dt>
 <dd>May not reflect most recent write operation  </dd>
@@ -1559,7 +2075,7 @@
 <dd>Use <code>ConsistentRead=true</code> parameter  </dd>
 <dd>Not available for GSI queries</dd>
 </dl>
-<h2 id="capacity-modes">Capacity Modes</h2>
+<h2 id="capacity-modes">Capacity Modes<a class="headerlink" href="#capacity-modes" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1591,7 +2107,7 @@
 <dt><strong>Write Capacity Units (WCU)</strong></dt>
 <dd>1 WCU = 1 write/sec for item up to 1KB</dd>
 </dl>
-<h2 id="dynamodb-streams">DynamoDB Streams</h2>
+<h2 id="dynamodb-streams">DynamoDB Streams<a class="headerlink" href="#dynamodb-streams" title="Permanent link">&para;</a></h2>
 <p><strong>Purpose</strong>: Capture data modification events in tables<br />
 <strong>Retention</strong>: 24 hours<br />
 <strong>Ordering</strong>: Records appear in same sequence as modifications<br />
@@ -1601,22 +2117,22 @@
 - <strong>NEW_IMAGE</strong>: Entire item after modification
 - <strong>OLD_IMAGE</strong>: Entire item before modification<br />
 - <strong>NEW_AND_OLD_IMAGES</strong>: Both new and old images</p>
-<h2 id="global-tables">Global Tables</h2>
+<h2 id="global-tables">Global Tables<a class="headerlink" href="#global-tables" title="Permanent link">&para;</a></h2>
 <p><strong>Multi-region replication</strong> - Automatically replicate across regions<br />
 <strong>Multi-active</strong> - Read and write in any region<br />
 <strong>Conflict resolution</strong> - Last writer wins<br />
 <strong>Requirements</strong>: DynamoDB Streams must be enabled</p>
-<h2 id="dax-dynamodb-accelerator">DAX (DynamoDB Accelerator)</h2>
+<h2 id="dax-dynamodb-accelerator">DAX (DynamoDB Accelerator)<a class="headerlink" href="#dax-dynamodb-accelerator" title="Permanent link">&para;</a></h2>
 <p><strong>In-memory cache</strong> - Microsecond latency for DynamoDB<br />
 <strong>Fully managed</strong> - No cache management required<br />
 <strong>Write-through cache</strong> - Consistent with DynamoDB<br />
 <strong>Cluster-based</strong> - Multi-AZ for high availability</p>
-<h2 id="dynamodb-transactions">DynamoDB Transactions</h2>
+<h2 id="dynamodb-transactions">DynamoDB Transactions<a class="headerlink" href="#dynamodb-transactions" title="Permanent link">&para;</a></h2>
 <p><strong>ACID Properties</strong> - Atomic, consistent, isolated, durable operations<br />
 <strong>TransactWriteItems</strong> - Up to 100 write actions across multiple tables<br />
 <strong>TransactReadItems</strong> - Up to 100 read actions with snapshot isolation<br />
 <strong>Additional Cost</strong> - 2x the normal consumed capacity</p>
-<h2 id="query-operations">Query Operations</h2>
+<h2 id="query-operations">Query Operations<a class="headerlink" href="#query-operations" title="Permanent link">&para;</a></h2>
 <dl>
 <dt><strong>Query</strong></dt>
 <dd>Retrieve items with same partition key  </dd>
@@ -1632,12 +2148,12 @@
 <dd><strong>BatchGetItem</strong> - Retrieve up to 100 items  </dd>
 <dd><strong>BatchWriteItem</strong> - Put/delete up to 25 items</dd>
 </dl>
-<h2 id="error-handling">Error Handling</h2>
+<h2 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h2>
 <p><strong>Exponential Backoff</strong> - Retry with progressively longer delays<br />
 <strong>ProvisionedThroughputExceededException</strong> - Throttling due to capacity limits<br />
 <strong>ConditionalCheckFailedException</strong> - Conditional write failed<br />
 <strong>ValidationException</strong> - Invalid request parameters</p>
-<h2 id="best-practices">Best Practices</h2>
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Design primary key for even data distribution</li>
 <li>Use sort keys for querying patterns</li>
@@ -1703,7 +2219,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "search.highlight", "toc.integrate"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "navigation.expand", "navigation.tabs", "navigation.tabs.sticky", "search.highlight", "search.suggest", "toc.integrate", "content.code.copy", "content.tooltips"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
