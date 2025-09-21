@@ -65,6 +65,8 @@
 - Implement proper error handling
 - Monitor with CloudWatch metrics
 - Use provisioned concurrency for latency-critical workloads
+    - help remove the cold start 
+    - keep a fixed number of instance always warm: initialize the exec env before the request comes in
 
 ## Good to Know
 
