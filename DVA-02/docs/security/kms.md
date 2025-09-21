@@ -11,6 +11,7 @@
 - You create, own, and manage
 - Can enable/disable, rotate, delete
 - Cost: $1/month per key + usage
+- If you want cross-account encryption, you must use SSE-KMS with customer managed CMKs, not AWS managed keys
 
 ### AWS Managed Keys
 - Created/managed by AWS services
