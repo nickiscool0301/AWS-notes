@@ -148,6 +148,17 @@
 **Price Class 100** - North America and Europe only  
 **Price Class 200** - North America, Europe, Asia, Middle East, Africa
 
+
+## CloudFront Functions
+- Lightweight JavaScript functions at edge locations
+- Ideal for simple HTTP request/response manipulations
+- Milisecond latency, startup, very cheap
+- No access to AWS SDK or services
+- Use cases:
+  - simple header manipulations
+  - redirects
+  - URL rewrites 
+
 ## Best Practices
 
 - Use S3 Transfer Acceleration with CloudFront for global uploads

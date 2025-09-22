@@ -58,6 +58,10 @@
 - Total size: 4KB
 - There is no limit to the number of env variables
 
+## Lambda with VPC
+- AWSLambdaBasicExecutionRole: write logs to CloudWatch (not allow VPC access)
+- AWSLambdaVPCAccessExecutionRole: manage ENIs in your VPC
+
 ## Best Practices
 
 - Keep functions small and focused
@@ -68,8 +72,27 @@
     - help remove the cold start 
     - keep a fixed number of instance always warm: initialize the exec env before the request comes in
 
+## Lambda Edge
+- Extension of Lambda
+- Let you run functions at AWS Edge locations
+- Run in response to CloudFront events
+- Has full access to AWS SDK and services (S3, DynamoDB, etc)
+- Use cases:
+  - authentication/authorization
+  - dynamic web content generation
+  - request/response manipulation
+  - custom headers 
+- Only support in us-east-1 region
+
 ## Good to Know
-Moving Lambda from AWS console to AWS CloudFormation:
+1. Moving Lambda from AWS console to AWS CloudFormation:
 
 - Upload all code as a zip to S3, and refer the object in AWS::Lambda::Function block
 - Write AWS Lambda code inline in CloudFormation in AWS::Lambda::Function block as long as there are no 3rd-party dependencies
+
+
+2. Unique identifier to associate events with specific Lambda function invocations:
+- context: contains the Lambda request ID (context.aws_request_id)
+- event: contains the X-Amzn-Trace-Id header (event.headers['X-Amzn-Trace-Id']), or information about event that triggers the function
+- Lambda automatically captures anything written to stdout/stderr and sends to CloudWatch Logs (eg: console.log in Node.js, print in Python)
+

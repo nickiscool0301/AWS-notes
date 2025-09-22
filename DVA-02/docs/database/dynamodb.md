@@ -60,6 +60,8 @@
 | **Global Secondary Index (GSI)** | Different from table | Optional, different from table | Configurable | Query different access patterns |
 | **Local Secondary Index (LSI)** | Same as table | Different from table | Configurable | Additional sort orders |
 
+**LSI** requires the same partition key as the base table and must be created at table creation time.
+
 **GSI Limits**: 20 per table  
 **LSI Limits**: 5 per table (must be created at table creation)
 
