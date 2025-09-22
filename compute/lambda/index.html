@@ -748,9 +748,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#lambda-with-vpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lambda with VPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lambda-edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lambda Edge
     </span>
   </a>
   
@@ -2002,6 +2020,11 @@
 <li>Total size: 4KB</li>
 <li>There is no limit to the number of env variables</li>
 </ul>
+<h2 id="lambda-with-vpc">Lambda with VPC<a class="headerlink" href="#lambda-with-vpc" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AWSLambdaBasicExecutionRole: write logs to CloudWatch (not allow VPC access)</li>
+<li>AWSLambdaVPCAccessExecutionRole: manage ENIs in your VPC</li>
+</ul>
 <h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Keep functions small and focused</li>
@@ -2014,12 +2037,37 @@
 </ul>
 </li>
 </ul>
-<h2 id="good-to-know">Good to Know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
-<p>Moving Lambda from AWS console to AWS CloudFormation:</p>
+<h2 id="lambda-edge">Lambda Edge<a class="headerlink" href="#lambda-edge" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Upload all code as a zip to S3, and refer the object in AWS::Lambda::Function block</li>
-<li>Write AWS Lambda code inline in CloudFormation in AWS::Lambda::Function block as long as there are no 3rd-party dependencies</li>
+<li>Extension of Lambda</li>
+<li>Let you run functions at AWS Edge locations</li>
+<li>Run in response to CloudFront events</li>
+<li>Has full access to AWS SDK and services (S3, DynamoDB, etc)</li>
+<li>Use cases:</li>
+<li>authentication/authorization</li>
+<li>dynamic web content generation</li>
+<li>request/response manipulation</li>
+<li>custom headers </li>
+<li>Only support in us-east-1 region</li>
 </ul>
+<h2 id="good-to-know">Good to Know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Moving Lambda from AWS console to AWS CloudFormation:</p>
+</li>
+<li>
+<p>Upload all code as a zip to S3, and refer the object in AWS::Lambda::Function block</p>
+</li>
+<li>
+<p>Write AWS Lambda code inline in CloudFormation in AWS::Lambda::Function block as long as there are no 3rd-party dependencies</p>
+</li>
+<li>
+<p>Unique identifier to associate events with specific Lambda function invocations:</p>
+</li>
+<li>context: contains the Lambda request ID (context.aws_request_id)</li>
+<li>event: contains the X-Amzn-Trace-Id header (event.headers['X-Amzn-Trace-Id']), or information about event that triggers the function</li>
+<li>Lambda automatically captures anything written to stdout/stderr and sends to CloudWatch Logs (eg: console.log in Node.js, print in Python)</li>
+</ol>
 
 
 

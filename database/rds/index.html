@@ -1261,6 +1261,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#rds-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDS Proxy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1869,6 +1878,20 @@
 <ul>
 <li>You can authenticate to your DB instance using AWS Identity and Access Management (IAM) database authentication</li>
 <li>DB Supported: MySQL, PostgreSQL, and MariaDB</li>
+</ul>
+<h2 id="rds-proxy">RDS Proxy<a class="headerlink" href="#rds-proxy" title="Permanent link">&para;</a></h2>
+<ul>
+<li>HA proxy for RDS</li>
+<li>Key points</li>
+<li>Connection pooling: reuses established connections to DB</li>
+<li>Scalability: handles thousands of concurrent connections </li>
+<li>Failover handling: when failure occurs, proxy redirects connections to healthy DB instances</li>
+<li>IAM authentication: works with IAM, and Secret Manager</li>
+<li>Support engines: RDS MySQL, RDS PostgreSQL, Aurora MySQL, Aurora PostgreSQL</li>
+<li>Use cases:</li>
+<li>Serverless application: Lambda functions can open many connections to RDS, which can exhaust DB connections. RDS Proxy helps manage and pool these connections.</li>
+<li>Unpredictable workloads: RDS Proxy can handle sudden spikes in traffic by efficiently managing connections.</li>
+<li>Fast failover and HA    </li>
 </ul>
 
 
